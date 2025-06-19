@@ -1,0 +1,457 @@
+/* General Resets and Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #26a69a;      /* Sophisticated Teal/Green */
+    --secondary-color: #e9ecef;    /* Very Light Gray (for subtle backgrounds/hovers) */
+    --background-color: #f8f9fa;   /* Off-White Page Background */
+    --text-color: #212529;         /* Dark Charcoal Text */
+    --text-light: #6c757d;        /* Medium Gray Secondary Text */
+    --border-color: #ced4da;        /* Light-Medium Gray Borders */
+    --shadow-color: rgba(0, 0, 0, 0.075); /* Softer Shadow */
+    --font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-family), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 17px; /* Standard iOS text size */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    padding: 40px 0 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header .profile-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 28px; /* Adjusted for better hierarchy */
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 10px 0 5px;
+}
+
+header p {
+    font-size: 17px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+header p em {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Section Styling */
+.section {
+    background-color: #ffffff; /* White background for cards */
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 12px; /* iOS rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Refined shadow for cards */
+}
+
+.section h2 {
+    font-size: 22px; /* Adjusted for better hierarchy */
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section p, .section ul li {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.section strong {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.section ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+.section ul li {
+    position: relative;
+    padding-left: 25px; /* Space for custom bullet */
+    margin-bottom: 8px;
+}
+
+.section ul li::before {
+    content: "\2022"; /* Unicode bullet character */
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.2em; /* Position bullet correctly */
+    position: absolute;
+    left: 10px;
+}
+
+/* Highlight Backgrounds */
+.highlight-bg-blue {
+    background-color: #eef7ff; /* Lighter blue */
+}
+
+.highlight-bg-green {
+    background-color: #e6f7f0; /* Lighter green */
+}
+
+.highlight-bg-yellow {
+    background-color: #fff9e6; /* Lighter yellow */
+}
+
+/* NEW: Base styles for general images in .section (not in tables/galleries) */
+.section > img,
+.section p > img, 
+.section ul > li > img {
+    max-width: 80%; /* For single column, centered images */
+    max-height: 260px; /* Further reduced max-height */
+    object-fit: contain;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    cursor: pointer;
+}
+
+/* --- Universal Image Gallery Styling --- */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Default to 2-column layout */
+    gap: 15px;
+    padding: 15px 0;
+    align-items: center;
+}
+
+/* For galleries with only one image, make it a single, centered column */
+.image-gallery:has(img:first-child:last-child) {
+    grid-template-columns: 1fr; /* Single column */
+}
+
+.image-gallery img {
+    width: 100%;
+    max-height: 180px; /* Standardized max-height for vertical images */
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    cursor: pointer;
+    margin: 0 auto; /* Center image within its grid cell */
+    display: block;
+}
+
+/* In a single-image gallery, we can allow the image to be a bit larger */
+.image-gallery:has(img:first-child:last-child) img {
+    max-width: 70%; /* Don't let single images get too wide */
+    max-height: 240px; /* Allow single vertical images to be a bit taller */
+}
+
+.toggle div video {
+    max-width: 80%; /* Reduce max-width to make images generally smaller */
+    max-height: 450px; /* Constrain height for vertical images */
+    object-fit: contain; /* Ensure entire image is visible, preserving aspect ratio */
+    display: block;  /* Behaves as a block, allows margin auto for centering */
+    margin: 15px auto; /* 15px top/bottom margin, centered horizontally */
+    border-radius: 8px; /* Consistent rounded corners */
+    box-shadow: 0 2px 8px var(--shadow-color); /* Subtle shadow */
+    cursor: pointer; /* Indicate it's clickable (for lightbox) */
+}
+
+.section video,
+.toggle div video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    cursor: pointer;
+}
+
+/* Table Styles - iOS Inspired */
+.section table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate; /* Use separate for border-spacing and rounded corners on table */
+    border-spacing: 0;
+    margin: 25px 0;
+    font-size: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden; /* To make border-radius clip inner content */
+}
+
+.section th,
+.section td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section th {
+    background-color: var(--secondary-color);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.section tr:last-child td {
+    border-bottom: none;
+}
+
+/* Images within table cells */
+.section td img {
+    max-width: 100%; /* Keep 100% for table cell context */
+    max-height: 180px; /* Further reduced max-height for images in tables */
+    object-fit: contain; /* Ensure entire image is visible, preserving aspect ratio */
+    display: block;
+    margin: 8px auto; /* Center images in table cells too */
+    border-radius: 6px;
+    box-shadow: none; /* Typically no shadow for images in tables */
+    cursor: pointer; /* For lightbox */
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.image-gallery img, .image-gallery video {
+    width: 100%;
+    height: 200px; /* Standardized height */
+    object-fit: cover; /* Crop to fit, maintain aspect ratio */
+    margin: 0; /* Override general image margin for gallery items */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px var(--shadow-color);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.image-gallery img:hover, .image-gallery video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Toggle (Details/Summary) Styles - iOS Inspired */
+.toggle summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 15px 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin-bottom: 0; /* Remove bottom margin for connected look when open */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease, border-radius 0.2s ease;
+    list-style: none; /* Remove default marker */
+}
+
+.toggle summary::-webkit-details-marker { display: none; } /* Hide Safari default arrow */
+.toggle summary::marker { display: none; } /* Hide Firefox default arrow */
+
+.toggle summary:hover {
+    background-color: var(--secondary-color);
+    filter: brightness(95%); /* Slightly darken the secondary color on hover */
+}
+
+.toggle details[open] summary {
+    background-color: var(--primary-color); /* Primary accent color for open summary */
+    color: white; /* White text for contrast */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.toggle summary::after { /* Custom arrow */
+    content: '›'; /* Chevron right for collapsed state */
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--text-light);
+    transform: rotate(0deg); /* Start with no rotation */
+    transition: transform 0.3s ease, color 0.2s ease;
+}
+
+.toggle details[open] summary::after {
+    transform: rotate(90deg);
+    color: white; /* White arrow for contrast */
+}
+
+.toggle div {
+    padding: 15px 20px;
+    background-color: var(--secondary-color);
+    border: none; /* Remove border, rely on background */
+    border-top: 1px solid var(--border-color); /* Separator line */
+    border-radius: 0 0 10px 10px;
+    margin-top: -1px; /* Overlap slightly for seamless look */
+}
+
+/* General link styles */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+/* Contact Section specific link style */
+#contact a {
+    font-weight: 500; /* Keep specific font-weight if desired */
+    /* General color and text-decoration will be inherited */
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #1c1c1e; /* Dark background for footer */
+    color: #f2f2f7; /* Light text for footer */
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Lightbox Modal Styles */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Darker, more translucent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex; /* For centering image if it's smaller than max */
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content img, .lightbox-content video {
+    max-width: 95%;
+    max-height: 90vh; /* Ensure image fits vertically in the viewport */
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -35px; /* Position above the image */
+    right: -5px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 5px;
+    line-height: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        width: 95%;
+    }
+    header h1 {
+        font-size: 24px;
+    }
+    .section h2 {
+        font-size: 20px;
+    }
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+    .image-gallery img, .image-gallery video {
+        height: 150px;
+    }
+    .toggle summary {
+        padding: 12px 15px;
+    }
+    .toggle div {
+        padding: 12px 15px;
+    }
+    .section img,
+    .toggle div img,
+    .section video,
+    .toggle div video {
+        margin: 10px auto; /* Reduce margin on smaller screens for general images */
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Utility class to prevent body scroll when lightbox is open */
+.no-scroll {
+    overflow: hidden;
+}

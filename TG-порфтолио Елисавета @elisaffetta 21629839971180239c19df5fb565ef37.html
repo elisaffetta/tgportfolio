@@ -1,0 +1,703 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>TG-порфтолио Елисавета @elisaffetta </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="21629839-9711-8023-9c19-df5fb565ef37" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/solid_beige.png" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">👋🏼</span></div><h1 class="page-title">TG-порфтолио Елисавета @elisaffetta </h1><p class="page-description"></p></header><div class="page-body"><h2 id="21729839-9711-80c7-a5a5-fa95673c6e14" class="">Помогаю экспертам зарабатывать через Telegram</h2><p id="21729839-9711-8061-984b-f72fa0e29011" class=""><em>Создаю боты, лид-магниты и контент, которые приводят клиентов на автопилоте</em></p><hr id="21729839-9711-806a-a44f-c330aa8a5bf2"/><h2 id="21729839-9711-80c1-a93d-f23d4707666d" class="block-color-blue_background">👋 Коротко обо мне</h2><p id="21729839-9711-80b6-880c-d79a9b9b1c13" class="">Приветствую! Я Елисавета, и помогаю экспертам превращать свои знания в деньги через Telegram. </p><p id="21729839-9711-8062-8a50-eedaddd8a541" class="">За 4 года упаковала 20+ экспертов — врачей, коучей, бизнес-консультантов.</p><p id="21729839-9711-8040-afaa-c59a48c2cf61" class=""><strong>Что я делаю</strong>: пишу контент, создаю ботов с ИИ и лид-магниты. </p><p id="21729839-9711-802d-b7dd-e7bfa1123cfb" class="">В результате эксперты получают больше клиентов и экономят время на рутине.</p><hr id="21729839-9711-8048-8286-fcf24cc939e7"/><h2 id="21729839-9711-805d-a23c-f13749c42775" class="block-color-blue_background">🎯 Что я делаю для экспертов?</h2><blockquote id="21729839-9711-80ac-b900-e8ef3f7681e1" class="">Для полного ознакомления с моими компетенциями, нажмите на ►</blockquote><ul id="21729839-9711-802a-9f94-d12a6049f997" class="block-color-default toggle"><li><details open=""><summary><strong>✍️ Полное ведение Telegram-каналов</strong></summary><ul id="21729839-9711-8096-be63-d749acec4977" class="bulleted-list"><li style="list-style-type:disc">Глубинный анализ ниши, рынка, конкурентов</li></ul><ul id="21729839-9711-8069-a5a3-d517549d0172" class="bulleted-list"><li style="list-style-type:disc">Создание уникального tone-of-voice (или адаптация под имеющийся)</li></ul><ul id="21729839-9711-80ba-b60a-ca2b85525c02" class="bulleted-list"><li style="list-style-type:disc">Создание контент-стратегии и визуального стиля</li></ul><figure id="21729839-9711-80ff-ad5e-dfa6d488fecf" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image.png"><img style="width:624px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image.png"/></a></figure><ul id="21729839-9711-80ef-9677-f1a17462ac6e" class="bulleted-list"><li style="list-style-type:disc">Написание экспертных постов с призывами к действию</li></ul><figure id="21729839-9711-809c-8533-fb9acaf5d8e9" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%201.png"><img style="width:432px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%201.png"/></a></figure><ul id="21729839-9711-80a1-b30b-cbf73f858afa" class="bulleted-list"><li style="list-style-type:disc">Аналитика и оптимизация по метрикам, коррекция стратегии при необходимости</li></ul></details></li></ul><ul id="21729839-9711-80e3-8231-d8e503730b08" class="block-color-default toggle"><li><details open=""><summary><strong>🤖 Умные Telegram-боты с ИИ</strong></summary><ul id="21729839-9711-80b7-8d27-ce0a776a8da3" class="bulleted-list"><li style="list-style-type:disc">ИИ-консультанты в вашей экспертной теме<figure id="21729839-9711-80a0-8d2a-f051137f9ea5" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_13.30.45.png"><img style="width:336px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_13.30.45.png"/></a></figure></li></ul><ul id="21729839-9711-8044-9ace-e17a7a698114" class="bulleted-list"><li style="list-style-type:disc">Автоматическая квалификация клиентов</li></ul><ul id="21729839-9711-80f5-8dc2-dcc9f1e37a9c" class="bulleted-list"><li style="list-style-type:disc">Интеграция с календарем для записи на консультации</li></ul><ul id="21729839-9711-8046-b3a8-dd23d23a75b0" class="bulleted-list"><li style="list-style-type:disc">Выдача лид-магнитов с проверкой подписки<figure id="21729839-9711-8020-bb3c-c46b91b17e31" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_13.32.02.png"><img style="width:336px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_13.32.02.png"/></a></figure></li></ul></details></li></ul><ul id="21729839-9711-8065-a10e-d0bdd2b32e8e" class="block-color-default toggle"><li><details open=""><summary><strong>📖 Лид-магниты, которые цепляют</strong></summary><ul id="21729839-9711-803a-9eb7-d2ac0e27414e" class="bulleted-list"><li style="list-style-type:disc">Экспертные гайды на 15-40 страниц</li></ul><figure id="21729839-9711-80c4-a280-d48bc62ecbf9" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%202.png"><img style="width:528px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%202.png"/></a></figure><ul id="21729839-9711-8065-8e51-c15f86fd8685" class="bulleted-list"><li style="list-style-type:disc">Чек-листы и готовые шаблоны</li></ul><ul id="21729839-9711-8016-8cac-f4b139c6aa91" class="bulleted-list"><li style="list-style-type:disc">Визуальное оформление в едином стиле</li></ul><figure id="21729839-9711-80b4-b83d-ce52e54edf1d" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%203.png"><img style="width:528px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%203.png"/></a></figure><ul id="21729839-9711-803a-9053-dec006c14b1e" class="bulleted-list"><li style="list-style-type:disc">HTML-страницы с интерактивными элементами<figure id="21729839-9711-8003-8f9a-d5ff84d9af27" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_14.24.08.png"><img style="width:528px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_14.24.08.png"/></a></figure></li></ul></details></li></ul><hr id="21729839-9711-8080-96df-c29ab0885d10"/><h1 id="21729839-9711-8055-987a-ff75c8565b1c" class="block-color-blue_background">💼 Мои главные кейсы</h1><h2 id="21729839-9711-8019-8be5-dd0bbcc8d438" class="block-color-yellow_background">1 кейс: NeuroScribe — ИИ-платформа для контента</h2><p id="21729839-9711-803b-afcb-e3070a37aec6" class=""><strong>Результат</strong>: 199,000 просмотров за последний год, 3,800 подписчиков в Telegram</p><div id="21729839-9711-8052-8b37-ec3e31223884" class="column-list"><div id="21729839-9711-804b-a20e-c0d715dd9f57" style="width:43.75%" class="column"><figure id="21729839-9711-8015-8977-d90afe7b318b" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_13.57.38.png"><img style="width:336px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_13.57.38.png"/></a></figure></div><div id="21729839-9711-8001-9979-d74da629a72b" style="width:56.25%" class="column"><figure id="21729839-9711-8046-86ab-d81bd9083dbf" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%204.png"><img style="width:384px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%204.png"/></a></figure></div></div><p id="21729839-9711-80e4-8129-d06f805daabf" class=""><strong>Что делала</strong>:</p><ul id="21729839-9711-800a-a536-f4541e9ae192" class="bulleted-list"><li style="list-style-type:disc">800+ экспертных нишевых постов за 2 года<br/><br/><em>Ссылка:</em><br/><br/><a href="https://t.me/neuroscribe">https://t.me/neuroscribe</a><br/><br/></li></ul><ul id="21729839-9711-804a-bb1f-c5d1180e4cac" class="bulleted-list"><li style="list-style-type:disc">Полная контент-стратегия от анализа до реализации</li></ul><ul id="21729839-9711-800f-ba71-f15878ef6e7c" class="bulleted-list"><li style="list-style-type:disc">Визуальные обложки для каждого поста в брендовых цветах</li></ul><ul id="21729839-9711-80bf-8318-f1121cafc09d" class="bulleted-list"><li style="list-style-type:disc">Лид-магнит &quot;110 готовых промтов&quot; с HTML-версией<br/><br/><em>Ссылка: </em><br/><br/><a href="https://neuroscribe.ru/110tasks">https://neuroscribe.ru/110tasks</a><br/><br/></li></ul><ul id="21729839-9711-80fa-8356-d199eb102318" class="bulleted-list"><li style="list-style-type:disc">Telegram-бот с проверкой подписки (3,000+ пользователей)<br/><br/><em>Ссылка: </em><br/><br/><a href="https://t.me/aiaiexprt_bot">https://t.me/aiaiexprt_bot</a></li></ul><hr id="21729839-9711-80de-9fe6-f887246ebecf"/><h2 id="21729839-9711-80aa-9950-dae6d8778027" class="block-color-yellow_background">2 кейс: Врач акушер-гинеколог (Сахалин)</h2><p id="21729839-9711-8075-a55f-e145ed5d771a" class="block-color-teal_background"><strong>Задача</strong>: Упаковать 35-летний опыт для онлайн-аудитории</p><div id="21729839-9711-80bb-a548-dfa56d78fa9a" class="column-list"><div id="21729839-9711-8020-af23-fa05e7388b19" style="width:37.5%" class="column"><figure id="21729839-9711-80a1-9892-eace846af3bc" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_14.00.04.png"><img style="width:240px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_14.00.04.png"/></a></figure></div><div id="21729839-9711-804e-a8ea-c005d2d769ab" style="width:62.5%" class="column"><figure id="21729839-9711-8086-bfba-fe6efb8efcc8" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_14.06.04.png"><img style="width:240px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_14.06.04.png"/></a></figure></div></div><p id="21729839-9711-80ac-8670-c6a83745c85c" class="block-color-teal_background"><strong>Что сделала</strong>:</p><ul id="21729839-9711-80e7-a0cc-cf583d1a4ead" class="bulleted-list"><li style="list-style-type:disc"><strong>ИИ-бот консультант в Telegram</strong> с базой знаний врача<br/><br/><em>Ссылка: </em><br/><br/><a href="https://t.me/DrMoskaleva_assistant_bot">https://t.me/DrMoskaleva_assistant_bot</a></li></ul><ul id="21729839-9711-8099-a0ab-df6152c6e959" class="bulleted-list"><li style="list-style-type:disc">Автоматическая запись на приём через бота</li></ul><ul id="21729839-9711-802b-8c2a-d2650c795a9c" class="bulleted-list"><li style="list-style-type:disc">Интеграция всех соцсетей в единую систему</li></ul><ul id="21729839-9711-8041-bfcf-c6a3a01b3bed" class="bulleted-list"><li style="list-style-type:disc">Контент-план для Instagram Reels на 3 месяца</li></ul><ul id="21729839-9711-805b-81d6-f6ad23d3deda" class="bulleted-list"><li style="list-style-type:disc">15 готовых сценариев для экспертных видео</li></ul><p id="21729839-9711-8022-ae0b-e301d3fe75ab" class="block-color-gray_background"><strong>Особенность</strong>: Бот отвечает на вопросы о женском здоровье и в каждом ответе предлагает записаться на консультацию</p><hr id="21729839-9711-804c-8e9b-f8323ace0515"/><h2 id="21729839-9711-8013-a66e-d5f84d7d32e0" class="block-color-yellow_background">3 кейс: Нутрициолог из США (англоязычный проект)</h2><p id="21729839-9711-80a9-ae5f-f2e18b397e73" class="block-color-teal_background"><strong>Задача</strong>: Выход на американский рынок, ведение Telegram канала</p><p id="21729839-9711-8064-915b-e88b237ce8c1" class="block-color-teal_background"><strong>Что реализовала</strong>:</p><ul id="21729839-9711-8065-a098-f140009d9fda" class="bulleted-list"><li style="list-style-type:disc">Полная упаковка экспертности на английском языке</li></ul><ul id="21729839-9711-80cd-808a-d75e0d0aea7e" class="bulleted-list"><li style="list-style-type:disc">Контент-план на 3 месяца (36 постов)<figure id="21729839-9711-8021-aff3-e4d225f272b5" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_14.03.20.png"><img style="width:528px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_14.03.20.png"/></a></figure></li></ul><ul id="21729839-9711-80a3-b6d7-def03dc74d9a" class="bulleted-list"><li style="list-style-type:disc">Ежедневная публикация постов и визуального контента в едином стиле</li></ul><div id="21729839-9711-8044-a31a-d6db040c49da" class="column-list"><div id="21729839-9711-80c9-aec5-cfe6b18a2a88" style="width:31.25%" class="column"><figure id="21729839-9711-80de-8263-f1042d79a078" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%205.png"><img style="width:192px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%205.png"/></a></figure></div><div id="21729839-9711-8049-a8ec-fa6c51b945ea" style="width:68.75%" class="column"><figure id="21729839-9711-8058-8b59-cdd4c87d810d" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%206.png"><img style="width:192px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%206.png"/></a></figure></div></div><ul id="21729839-9711-800c-8299-e590e32b8e56" class="bulleted-list"><li style="list-style-type:disc">20-страничный лид-магнит &quot;7-дневный рацион здорового питания&quot;<br/><br/><em>Ссылка:</em><br/><br/><a href="https://drive.google.com/file/d/1lN6_U9V9Tu5odp0f1Re66-aSInJkQyco/view?usp=drive_link">https://drive.google.com/file/d/1lN6_U9V9Tu5odp0f1Re66-aSInJkQyco/view?usp=drive_link</a><br/><br/></li></ul><ul id="21729839-9711-8065-a5b3-cd35295d9fcf" class="bulleted-list"><li style="list-style-type:disc">Англоязычный бот с проверкой подписки<figure id="21729839-9711-80c4-a76f-c0bf2b8f9b77" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%207.png"><img style="width:240px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%207.png"/></a></figure></li></ul><hr id="21729839-9711-807a-af3d-e69b9dfb2ea7"/><h2 id="21729839-9711-8057-bc71-dcb732dd7ee9" class="block-color-yellow_background">4 кейс: SibLead Performance Agency</h2><p id="21729839-9711-800a-af74-ceb3a541ae71" class="block-color-teal_background"><strong>Задача</strong>: Упаковка агентства контекстной рекламы</p><div id="21729839-9711-800b-be8b-e934c15298c4" class="column-list"><div id="21729839-9711-80f3-9fd6-fb4c690f6c47" style="width:31.25%" class="column"><figure id="21729839-9711-80ed-ab04-cf0fcc280fb3" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%208.png"><img style="width:240px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%208.png"/></a></figure></div><div id="21729839-9711-8066-872c-c681255ab04c" style="width:68.75%" class="column"><figure id="21729839-9711-801d-9631-de7ba2c31536" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%209.png"><img style="width:288px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/image%209.png"/></a></figure></div></div><p id="21729839-9711-8031-9ea4-caaadcb37ac3" class="block-color-teal_background"><strong>Что создала</strong>:</p><ul id="21729839-9711-80cb-a090-d8040995a4ea" class="bulleted-list"><li style="list-style-type:disc">Полную упаковку личного бренда владельца</li></ul><ul id="21729839-9711-804e-bcb1-eddad4ab113b" class="bulleted-list"><li style="list-style-type:disc">Notion-лид-магнит с экспертными знаниями</li></ul><p id="21729839-9711-8018-b928-e1fb459b94c5" class=""><em>Ссылка:</em><div class="indented"><p id="21729839-9711-8066-94a7-d5931bd4794e" class=""> </p></div></p><ul id="21729839-9711-80e8-9105-d322c272fd3e" class="bulleted-list"><li style="list-style-type:disc">Многофункциональный бот с трёхэтапной квалификацией<figure id="21729839-9711-80d2-8750-e7cea95bcdd0" class="image"><a href="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_14.17.01.png"><img style="width:240px" src="TG-%D0%BF%D0%BE%D1%80%D1%84%D1%82%D0%BE%D0%BB%D0%B8%D0%BE%20%D0%95%D0%BB%D0%B8%D1%81%D0%B0%D0%B2%D0%B5%D1%82%D0%B0%20@elisaffetta%2021629839971180239c19df5fb565ef37/Screenshot_2025-06-19_at_14.17.01.png"/></a></figure></li></ul><ul id="21729839-9711-80c9-977e-e36bb575ff23" class="bulleted-list"><li style="list-style-type:disc">Посадочную страницу для лид-магнита</li></ul><ul id="21729839-9711-80b1-86f4-fd155a1afbe4" class="bulleted-list"><li style="list-style-type:disc">15 упакованных кейсов агентства</li></ul><p id="21729839-9711-806c-bbbc-df6c8357a018" class=""><em>Ссылка:</em><div class="indented"><p id="21729839-9711-8077-a164-df2a53a04af9" class=""> </p></div></p><hr id="21729839-9711-8065-8f03-d70b3b7ec633"/><h2 id="21729839-9711-8052-a5b9-fca6307f4983" class="block-color-blue_background">🤖 Примеры моих Telegram-ботов</h2><div id="21729839-9711-80a6-9b48-fdef5c46f36d" class="column-list"><div id="21729839-9711-8025-9a3f-f0137e671a87" style="width:50%" class="column"><h3 id="21729839-9711-80fc-a9d3-fa35ffa2e77d" class="">Бот для врача-гинеколога</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="21729839-9711-806d-b645-e547e771f7ee" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">💬 Функции:
+✅ AI-консультации по женскому здоровью
+✅ Автозапись на приём
+✅ Информация об опыте врача
+✅ Предупреждения о самолечении
+✅ Ссылки на все соцсети
+
+Бот: @DrMoskaleva_assistant_bot
+</code></pre></div><div id="21729839-9711-80e2-a64d-e56f4b365a0a" style="width:50%" class="column"><h3 id="21729839-9711-80b3-86c3-d2279db0ed35" class="">Бот для нутрициолога (англоязычный)</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="21729839-9711-808c-82a4-ee9f37acc7cd" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">💬 Функции:
+✅ Проверка подписки на канал
+✅ Выдача 20-страничного гайда
+✅ Трёхэтапное представление эксперта
+✅ Адаптивный интерфейс
+
+</code></pre></div></div><h3 id="21729839-9711-80e7-be59-d0c6a709ee0f" class="">Универсальный бот для экспертов</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="21729839-9711-8050-9dea-ece074f4c34e" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">💬 Функции:
+✅ Сбор данных через опросы
+✅ Автоматическая квалификация клиентов
+✅ Интеграция с Google Calendar
+✅ Push-напоминания
+✅ Аналитика в Google Таблицах
+</code></pre><hr id="21729839-9711-8048-a4ca-fd0a3ef62840"/><h2 id="21729839-9711-803b-aade-dec737dcd879" class="block-color-blue_background">📊 Конкретные результаты</h2><div id="21729839-9711-8047-bff1-f1c1a7ef9e6c" class="column-list"><div id="21729839-9711-8061-8111-e92776c32b92" style="width:50%" class="column"><h3 id="21729839-9711-80fa-bc65-e5a18e258cac" class="">Метрики каналов:</h3><ul id="21729839-9711-80ee-999c-f7da279f9bbd" class="bulleted-list"><li style="list-style-type:disc"><strong>NeuroScribe</strong>: 199,000 просмотров/год, 3,800 подписчиков</li></ul><ul id="21729839-9711-803d-8c5a-d09fcb240d68" class="bulleted-list"><li style="list-style-type:disc"><strong>50funnels</strong>: Полная экспертная упаковка агентства</li></ul><ul id="21729839-9711-8075-a48f-ea1e35df69da" class="bulleted-list"><li style="list-style-type:disc"><strong>Ageless Harmony</strong>: Успешный выход на англоязычный рынок</li></ul></div><div id="21729839-9711-80e9-91f8-c81eede5527d" style="width:50%" class="column"><h3 id="21729839-9711-80a3-9722-d1b389584bb6" class="">Эффективность ботов:</h3><ul id="21729839-9711-8072-a457-c4675527eda7" class="bulleted-list"><li style="list-style-type:disc"><strong>Лид-магнит NeuroScribe</strong>: 3,000+ пользователей</li></ul><ul id="21729839-9711-8000-b024-dc36594a9969" class="bulleted-list"><li style="list-style-type:disc"><strong>Конверсия врача</strong>: +40% записей на консультации</li></ul><ul id="21729839-9711-80fe-89e5-ecf98e35d417" class="bulleted-list"><li style="list-style-type:disc"><strong>Экономия времени</strong>: -70% на обработку обращений</li></ul></div></div><hr id="21729839-9711-80df-9b55-d4d60981c961"/><h2 id="21729839-9711-8084-8857-c8141c80eeaf" class="block-color-teal_background">💰 Услуги и стоимость</h2><table id="21729839-9711-80e6-b8fb-e5b0a1468a3c" class="simple-table"><tbody><tr id="21729839-9711-80f0-8ce5-fbb529dd9a2f"><td id="iCCa" class="">Услуга</td><td id="Y^S{" class="" style="width:370px">Что входит</td><td id="&lt;fqE" class="">Стоимость</td></tr><tr id="21729839-9711-80fe-be5c-eed4cb49cef8"><td id="iCCa" class=""><strong>Экспертная упаковка</strong></td><td id="Y^S{" class="" style="width:370px">Глубинное интервью, позиционирование, tone of voice</td><td id="&lt;fqE" class="">5,000 ₽</td></tr><tr id="21729839-9711-80e4-922b-f0dd83214f17"><td id="iCCa" class=""><strong>Контент-план на месяц</strong></td><td id="Y^S{" class="" style="width:370px">20-30 постов с тезисами, форматами, CTA</td><td id="&lt;fqE" class="">10,000 ₽</td></tr><tr id="21729839-9711-8016-b99d-c070e7d1fec9"><td id="iCCa" class=""><strong>Написание 10 постов</strong></td><td id="Y^S{" class="" style="width:370px">Готовые тексты в вашем стиле</td><td id="&lt;fqE" class="">18,000 ₽</td></tr><tr id="21729839-9711-807d-ab99-cf0fb06fa9dc"><td id="iCCa" class=""><strong>Брендовые обложки</strong></td><td id="Y^S{" class="" style="width:370px">10 обложек в едином стиле</td><td id="&lt;fqE" class="">10,000 ₽</td></tr><tr id="21729839-9711-8032-8923-febc3f824315"><td id="iCCa" class=""><strong>Лид-магнит + дизайн</strong></td><td id="Y^S{" class="" style="width:370px">Гайд 15-20 страниц с визуальным оформлением</td><td id="&lt;fqE" class="">15,000 ₽</td></tr><tr id="21729839-9711-8067-befa-e082ed8db09d"><td id="iCCa" class=""><strong>Бот для выдачи лид-магнитов</strong></td><td id="Y^S{" class="" style="width:370px">С проверкой подписки, интеграцией</td><td id="&lt;fqE" class="">10,000 ₽</td></tr><tr id="21729839-9711-80ac-a2cf-dad29c12b13c"><td id="iCCa" class=""><strong>AI-бот консультант</strong></td><td id="Y^S{" class="" style="width:370px">Умный помощник в вашей теме</td><td id="&lt;fqE" class="">20,000 ₽</td></tr><tr id="21729839-9711-805f-991e-fba39e309095"><td id="iCCa" class=""><strong>Лендинг для услуг</strong></td><td id="Y^S{" class="" style="width:370px">Адаптивная посадочная страница</td><td id="&lt;fqE" class="">23,000 ₽</td></tr></tbody></table><h3 id="21729839-9711-8039-99ea-f919c54eb6fd" class="">📦 Комплексные пакеты</h3><blockquote id="21729839-9711-80c0-97f3-d6d3cd1941c2" class="">Чтобы ознакомиться с пакетами, нажмите на ►</blockquote><ul id="21729839-9711-809a-88ab-d8c73e1e31bd" class="toggle"><li><details open=""><summary><strong>СТАРТ</strong> — 35,000 ₽</summary><ul id="21729839-9711-80df-8a7d-effad913ac9e" class="bulleted-list"><li style="list-style-type:disc">Экспертная упаковка</li></ul><ul id="21729839-9711-80c8-a45d-e65efbb6475f" class="bulleted-list"><li style="list-style-type:disc">Контент-план на 2 месяца</li></ul><ul id="21729839-9711-8007-99d2-f5f041373cc4" class="bulleted-list"><li style="list-style-type:disc">12 брендовых обложек</li></ul><ul id="21729839-9711-803d-aa41-d3fe48053618" class="bulleted-list"><li style="list-style-type:disc">Лид-магнит</li></ul><ul id="21729839-9711-801d-8bf3-ff3164a1f504" class="bulleted-list"><li style="list-style-type:disc">Бот для выдачи лид-магнитов</li></ul></details></li></ul><ul id="21729839-9711-8013-8059-c89babc02c11" class="toggle"><li><details open=""><summary><strong>РОСТ</strong> — 65,000 ₽</summary><ul id="21729839-9711-808c-af21-d8cca2e0a1bb" class="bulleted-list"><li style="list-style-type:disc">Всё из пакета &quot;Старт&quot;</li></ul><ul id="21729839-9711-80ca-9448-dfb816ca0743" class="bulleted-list"><li style="list-style-type:disc">24 готовых поста</li></ul><ul id="21729839-9711-804f-9183-cb5e4dfe7be3" class="bulleted-list"><li style="list-style-type:disc">AI-бот консультант</li></ul><ul id="21729839-9711-804f-8f2c-f19c59ca582c" class="bulleted-list"><li style="list-style-type:disc">Воронка продаж через бота</li></ul><ul id="21729839-9711-8099-8f02-d6f1b892b18c" class="bulleted-list"><li style="list-style-type:disc">Аналитика и рекомендации</li></ul></details></li></ul><ul id="21729839-9711-800c-8ffa-e978e75bb614" class="toggle"><li><details open=""><summary><strong>ПРОФИ</strong> — 90,000 ₽</summary><ul id="21729839-9711-8021-ae9f-f2e674a94494" class="bulleted-list"><li style="list-style-type:disc">Всё из пакета &quot;Рост&quot;</li></ul><ul id="21729839-9711-80f7-95d2-c815270abbb5" class="bulleted-list"><li style="list-style-type:disc">Полный брендбук</li></ul><ul id="21729839-9711-80ff-b587-d66497b45c12" class="bulleted-list"><li style="list-style-type:disc">Лендинг для услуг</li></ul><ul id="21729839-9711-802d-9971-f71897cac327" class="bulleted-list"><li style="list-style-type:disc">Комплексная система из 2-3 ботов</li></ul><ul id="21729839-9711-801c-a968-e276dd14ef3e" class="bulleted-list"><li style="list-style-type:disc">Стратегия масштабирования</li></ul><ul id="21729839-9711-80db-9d87-f355770918af" class="bulleted-list"><li style="list-style-type:disc">4 личные консультации</li></ul></details></li></ul><hr id="21729839-9711-80b7-a108-e3eafde8ed20"/><h2 id="21729839-9711-801b-bb0f-c3c6498a2705" class="">📋 Этапы моей работы</h2><blockquote id="21729839-9711-80ce-87bf-f205e00f8e09" class="">Чтобы ознакомиться с этапами, нажмите на ►</blockquote><ul id="21729839-9711-80c6-a9e4-f9e1cb179824" class="toggle"><li><details open=""><summary>1️⃣ Анализ и стратегия (1-2 дня)</summary><ul id="21729839-9711-8032-955c-c827a68f906f" class="bulleted-list"><li style="list-style-type:disc">Глубинное интервью с экспертом — выявляю сильные стороны и уникальность</li></ul><ul id="21729839-9711-80aa-98ab-ff721cc98ee5" class="bulleted-list"><li style="list-style-type:disc">Изучаю вашу аудиторию и конкурентов</li></ul><ul id="21729839-9711-801c-bfc9-f04e742f914e" class="bulleted-list"><li style="list-style-type:disc">Создаю позиционирование и tone of voice</li></ul></details></li></ul><ul id="21729839-9711-801c-8190-f0d8cbcecb6d" class="toggle"><li><details open=""><summary>2️⃣ Планирование контента (2-3 дня)</summary><ul id="21729839-9711-8032-b960-da0662b1d277" class="bulleted-list"><li style="list-style-type:disc">Составляю контент-план на 2-3 месяца с конкретными тезисами</li></ul><ul id="21729839-9711-8053-90c0-c0d1a7605968" class="bulleted-list"><li style="list-style-type:disc">Планирую воронки продаж через контент</li></ul><ul id="21729839-9711-8068-86f3-dcdf80577704" class="bulleted-list"><li style="list-style-type:disc">Определяю форматы и визуальный стиль</li></ul></details></li></ul><ul id="21729839-9711-8012-9c73-c8afabd0223e" class="toggle"><li><details open=""><summary>3️⃣ Реализация (7-14 дней)</summary><ul id="21729839-9711-8096-acad-c18d0c8cbe7a" class="bulleted-list"><li style="list-style-type:disc">Пишу готовые посты или создаю детальные планы</li></ul><ul id="21729839-9711-80d1-8ed0-cbc28a92897e" class="bulleted-list"><li style="list-style-type:disc">Делаю брендовые обложки в едином стиле</li></ul><ul id="21729839-9711-80d0-a5d1-e42e0950af0d" class="bulleted-list"><li style="list-style-type:disc">Разрабатываю и настраиваю ботов с ИИ</li></ul><ul id="21729839-9711-806f-ae51-d430420eff2e" class="bulleted-list"><li style="list-style-type:disc">Создаю лид-магниты с визуальным оформлением</li></ul></details></li></ul><ul id="21729839-9711-8026-8bd1-ec6d52e7e4df" class="toggle"><li><details open=""><summary>4️⃣ Запуск и оптимизация (5-7 дней)</summary><ul id="21729839-9711-809f-b03e-c3d2fdc58602" class="bulleted-list"><li style="list-style-type:disc">Тестирую все технические решения</li></ul><ul id="21729839-9711-8014-90e8-c63151c43386" class="bulleted-list"><li style="list-style-type:disc">Обучаю вас работе с созданными инструментами</li></ul><ul id="21729839-9711-805c-9f57-fd5e61f4f5ad" class="bulleted-list"><li style="list-style-type:disc">Отслеживаю метрики и даю рекомендации по улучшению</li></ul></details></li></ul><hr id="21729839-9711-8051-ab63-d8b52a5f4a79"/><blockquote id="21729839-9711-809b-bcdf-ee174f5cebca" class="block-color-teal_background"><strong>Свяжитесь со мной</strong>:<br/>+7(921)1807867 (Telegram/WhatsApp)<br/><br/><strong><a href="https://t.me/elisaffetta">Telegram</a></strong><br/><br/><strong><a href="https://www.notion.so/TG-elisaffetta-21629839971180239c19df5fb565ef37?pvs=21">Email</a></strong><br/><br/><strong><a href="https://elisatgcatalog.netlify.app/">Личный сайт</a></strong></blockquote><hr id="21729839-9711-8040-95c4-d0d0596aa898"/><h2 id="21729839-9711-80e6-a187-f420cb1734fc" class="">Почему эксперты выбирают меня?)</h2><h3 id="21729839-9711-8084-9520-eb32350121ff" class="">🎯 Системный подход</h3><p id="21729839-9711-8082-9895-d4cad9cf00b2" class="">Создаю не отдельные элементы, а целостные экосистемы для долгосрочного роста</p><h3 id="21729839-9711-80ca-a659-ee60388d6252" class="">🤖 Технологическое лидерство</h3><p id="21729839-9711-8073-a3b4-d38399088223" class="">1,5 года опыта с ИИ — интегрирую нейросети в каждый проект</p><h3 id="21729839-9711-808d-963a-db65b0d6c527" class="">📊 Измеримые результаты</h3><p id="21729839-9711-806a-a1c0-e60931a2198c" class="">Все проекты имеют конкретные KPI и регулярную аналитику</p><h3 id="21729839-9711-8087-993c-f5836e64e463" class="">🌍 Международный опыт</h3><p id="21729839-9711-8073-8bfe-caa5a6ab9a32" class="">Работаю на русском и английском, понимаю специфику разных рынков</p><hr id="21729839-9711-801d-8820-ef539903e4da"/><h2 id="21729839-9711-80fe-9d88-c66e6e133c83" class="">🎨 Что входит в мою работу</h2><h3 id="21729839-9711-807b-aa16-d29e16f6f36d" class="">📝 Контент-маркетинг</h3><ul id="21729839-9711-8007-a41a-ca6f39e4df5c" class="bulleted-list"><li style="list-style-type:disc">Глубинные интервью с экспертами для выявления сильных сторон</li></ul><ul id="21729839-9711-803d-a812-de1a464d6c12" class="bulleted-list"><li style="list-style-type:disc">Анализ целевой аудитории (сегментация на 4+ группы)</li></ul><ul id="21729839-9711-809c-a901-f5562a53d6eb" class="bulleted-list"><li style="list-style-type:disc">Контент-планы на 2-6 месяцев с детальными тезисами</li></ul><ul id="21729839-9711-8052-8270-dfeeb5b85f5a" class="bulleted-list"><li style="list-style-type:disc">Создание tone of voice и стиля коммуникации</li></ul><h3 id="21729839-9711-80a0-944e-e4bc3506ec8f" class="">🎨 Визуальная упаковка</h3><ul id="21729839-9711-804c-b027-d75384101d8b" class="bulleted-list"><li style="list-style-type:disc">Брендовые обложки для каждого поста</li></ul><ul id="21729839-9711-80f8-8b80-d08c94b46855" class="bulleted-list"><li style="list-style-type:disc">Инфографика и схемы для сложных тем</li></ul><ul id="21729839-9711-80d1-8410-fcfb8a8ffc81" class="bulleted-list"><li style="list-style-type:disc">Шаблоны для масштабирования</li></ul><ul id="21729839-9711-8054-a3fb-eb296478c76f" class="bulleted-list"><li style="list-style-type:disc">Единый стиль во всех материалах</li></ul><h3 id="21729839-9711-8061-a55e-f80683a94bf5" class="">🤖 Техническая реализация</h3><ul id="21729839-9711-80d8-a6cf-f7883a55bea7" class="bulleted-list"><li style="list-style-type:disc">Telegram-боты с ИИ-интеграцией</li></ul><ul id="21729839-9711-806d-b0c1-d29cf9a77bf4" class="bulleted-list"><li style="list-style-type:disc">Автоматизация через Google Scripts</li></ul><ul id="21729839-9711-80cc-b2de-fccbb35b7e51" class="bulleted-list"><li style="list-style-type:disc">Интеграция с календарями и CRM</li></ul><ul id="21729839-9711-800d-9510-fa424127e2d3" class="bulleted-list"><li style="list-style-type:disc">Системы аналитики и отчётности</li></ul><h3 id="21729839-9711-8019-a7be-f0e2e1cee8fe" class="">📖 Лид-магниты</h3><ul id="21729839-9711-8001-beec-d57c36bbaf7e" class="bulleted-list"><li style="list-style-type:disc">Экспертные гайды с практическими инструментами</li></ul><ul id="21729839-9711-807f-9b27-cb321a297393" class="bulleted-list"><li style="list-style-type:disc">HTML-версии с интерактивными элементами</li></ul><ul id="21729839-9711-80df-8746-dab9fcfb6ec3" class="bulleted-list"><li style="list-style-type:disc">Чек-листы и готовые шаблоны</li></ul><ul id="21729839-9711-80df-a1e2-d50f1941d669" class="bulleted-list"><li style="list-style-type:disc">Визуальное оформление в Figma</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
