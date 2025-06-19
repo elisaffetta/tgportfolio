@@ -12,13 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     closeButton.innerHTML = '&times;';
     lightboxContent.appendChild(closeButton);
 
-    const images = document.querySelectorAll('.section img, .toggle div img, .section video, .toggle div video');
+    const triggers = document.querySelectorAll('.lightbox-trigger');
 
-    images.forEach(item => {
-        // No need to add 'lightbox-image' class if styles target img/video directly
-        // item.classList.add('lightbox-image'); 
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent link from opening in new tab
             lightboxOverlay.classList.add('visible');
             document.body.classList.add('no-scroll');
 
@@ -28,18 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 existingMedia.remove();
             }
 
+            const sourceUrl = trigger.href;
+            const isVideo = sourceUrl.match(/\.(mp4|webm|mov)$/i);
+            
             let mediaElement;
-            if (item.tagName === 'VIDEO') {
+            if (isVideo) {
                 mediaElement = document.createElement('video');
-                mediaElement.src = item.src || item.querySelector('source')?.src;
+                mediaElement.src = sourceUrl;
                 mediaElement.controls = true;
                 mediaElement.autoplay = true; 
             } else {
                 mediaElement = document.createElement('img');
-                mediaElement.src = item.src;
+                mediaElement.src = sourceUrl;
             }
-            mediaElement.alt = item.alt || 'Lightbox image';
-            lightboxContent.insertBefore(mediaElement, closeButton); // Insert before close button
+            
+            mediaElement.alt = trigger.querySelector('img')?.alt || 'Lightbox content';
+            lightboxContent.insertBefore(mediaElement, closeButton);
         });
     });
 
@@ -58,6 +60,33 @@ document.addEventListener('DOMContentLoaded', () => {
             closeLightbox();
         }
     });
+
+    // Bot card scroller
+    const scrollContainer = document.querySelector('.bot-cards-container');
+    const scrollRightBtn = document.getElementById('scroll-bots-right');
+
+    if (scrollContainer && scrollRightBtn) {
+        scrollRightBtn.addEventListener('click', () => {
+            const card = scrollContainer.querySelector('.bot-card');
+            if (!card) return;
+            const cardWidth = card.offsetWidth;
+            const gap = 20; // As defined in CSS
+            const scrollAmount = cardWidth + gap;
+
+            // If we are near the end, scroll back to the beginning
+            if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 5) { // 5px tolerance
+                scrollContainer.scrollTo({
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                scrollContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
 
     // --- Scroll to Top Button Logic ---
     const scrollTopBtn = document.getElementById('scrollTopBtn');
