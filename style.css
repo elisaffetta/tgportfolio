@@ -1,118 +1,221 @@
-/* General Resets and Base Styles */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #26a69a;      /* Sophisticated Teal/Green */
-    --secondary-color: #e9ecef;    /* Very Light Gray (for subtle backgrounds/hovers) */
-    --background-color: #f8f9fa;   /* Off-White Page Background */
-    --text-color: #212529;         /* Dark Charcoal Text */
-    --text-light: #6c757d;        /* Medium Gray Secondary Text */
-    --border-color: #ced4da;        /* Light-Medium Gray Borders */
-    --shadow-color: rgba(0, 0, 0, 0.075); /* Softer Shadow */
-    --font-family: 'Montserrat', sans-serif;
+    --primary-color: #00A78E;
+    --background-color: #F9F9F9;
+    --card-bg-color: #ffffff;
+    --text-color: #212529;
+    --secondary-text-color: #6c757d;
+    --border-color: #e9ecef;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --font-main: 'Inter', sans-serif;
+}
+
+/* --- Header --- */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(248, 248, 248, 0.85); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* iOS-style blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 999;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0; /* Reduced padding to make header smaller */
+}
+
+.main-nav li {
+    margin: 0 20px;
+}
+
+.main-nav a {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+    text-decoration: none; /* Keep it clean on hover */
 }
 
 body {
-    font-family: var(--font-family), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    padding-top: 50px; /* Adjusted padding for smaller header */
+    font-family: var(--font-main);
     background-color: var(--background-color);
     color: var(--text-color);
-    line-height: 1.6;
-    font-size: 17px; /* Standard iOS text size */
+    margin: 0;
+    padding: 40px 20px; /* More vertical padding */
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-/* Header Styles */
-header {
+.profile-icon {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
     background-color: var(--secondary-color);
-    padding: 40px 0 20px;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-}
-
-header .profile-icon {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-header h1 {
-    font-size: 28px; /* Adjusted for better hierarchy */
-    font-weight: 700;
-    color: var(--text-color);
-    margin: 10px 0 5px;
-}
-
-header p {
-    font-size: 17px;
-    color: var(--text-light);
-    margin-bottom: 10px;
-}
-
-header p em {
-    font-style: normal;
-    font-weight: 500;
-    color: var(--primary-color);
-}
-
-/* Section Styling */
-.section {
-    background-color: #ffffff; /* White background for cards */
-    margin: 25px 0;
-    padding: 25px;
-    border-radius: 12px; /* iOS rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Refined shadow for cards */
-}
-
-.section h2 {
-    font-size: 22px; /* Adjusted for better hierarchy */
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-top: 0;
+    padding: 5px 12px;
+    border-radius: 8px;
+    display: inline-block;
     margin-bottom: 20px;
-    padding-bottom: 10px;
+}
+
+/* This targets the header with the H1 and contact button */
+.container header {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 50px; /* Add space to fix overlap */
+}
+
+.container {
+    max-width: 800px; /* A bit narrower for better readability */
+    margin: 0 auto;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1em; /* Reduced top margin */
+    margin-bottom: 1em;
+}
+
+.header-contact {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; /* Made smaller */
+    background-color: rgba(0, 128, 128, 0.1); /* Pastel transparent background */
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem; /* Made smaller */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.contact-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.contact-button svg {
+    margin-right: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    padding-bottom: 0.5em;
     border-bottom: 1px solid var(--border-color);
 }
 
-.section p, .section ul li {
-    font-size: 16px;
-    color: var(--text-color);
-    margin-bottom: 12px;
+h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color); /* Changed to main text color (black) */
 }
 
-.section strong {
+p, li {
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+}
+
+strong {
     font-weight: 600;
     color: var(--text-color);
 }
 
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #007A68; /* Darker teal on hover */
+    text-decoration: underline;
+}
+
+blockquote {
+    border-left: 3px solid var(--primary-color);
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #F4FBF9; /* A very light teal */
+    color: var(--secondary-text-color);
+    font-style: italic;
+}
+
+/* --- Card & Section Layout --- */
+.section,
+.case-study {
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    padding: 30px 40px;
+    margin-bottom: 25px; /* Add space between cards */
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Remove card styling from the container of case studies to avoid nesting */
+#case-studies.section {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.section:hover,
+.case-study:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Lists --- */
 .section ul {
-    list-style-type: none; /* Remove default bullets */
+    list-style: none;
     padding-left: 0;
 }
 
 .section ul li {
     position: relative;
     padding-left: 25px; /* Space for custom bullet */
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .section ul li::before {
-    content: "\2022"; /* Unicode bullet character */
-    color: var(--primary-color);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1.2em; /* Position bullet correctly */
+    content: '✓'; /* Checkmark bullet */
     position: absolute;
-    left: 10px;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 /* Highlight Backgrounds */
@@ -195,7 +298,14 @@ header p em {
     cursor: pointer;
 }
 
-/* Table Styles - iOS Inspired */
+/* --- Responsive Table Wrapper --- */
+.table-wrapper {
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    margin: 25px 0;
+}
+
+/* --- Table Styles --- */
 .section table {
     width: 100%;
     max-width: 100%;
@@ -275,6 +385,7 @@ header p em {
     align-items: center;
     transition: background-color 0.2s ease, border-radius 0.2s ease;
     list-style: none; /* Remove default marker */
+    border: 1px solid var(--border-color); /* Subtle border for affordance */
 }
 
 .toggle summary::-webkit-details-marker { display: none; } /* Hide Safari default arrow */
@@ -286,8 +397,8 @@ header p em {
 }
 
 .toggle details[open] summary {
-    background-color: var(--primary-color); /* Primary accent color for open summary */
-    color: white; /* White text for contrast */
+    background-color: #E0F2F1; /* Soft, pastel teal */
+    color: var(--text-color); /* Dark text for contrast */
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -303,7 +414,7 @@ header p em {
 
 .toggle details[open] summary::after {
     transform: rotate(90deg);
-    color: white; /* White arrow for contrast */
+    color: var(--text-color); /* Dark arrow for contrast */
 }
 
 .toggle div {
@@ -335,6 +446,46 @@ a:hover {
 
 #contact a:hover {
     text-decoration: underline;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h2 a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.contact-info h2 a:hover {
+    color: var(--primary-color);
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 128, 128, 0.2);
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, opacity 0.3s, transform 0.3s;
+    line-height: 1;
+}
+
+#scrollTopBtn:hover {
+    background-color: rgba(0, 128, 128, 0.4);
+    transform: translateY(-2px);
 }
 
 /* Footer */
